@@ -1,25 +1,33 @@
 <template>
   <div id="app">
+     <md-toolbar class="">
+      <md-button class="md-icon-button">
+        <md-icon>menu</md-icon>
+      </md-button>
 
-    <router-link to="/">Go to Home</router-link>
-    <router-link to="/venues">Go to Venues</router-link>
+      <h2 class="md-title" style="flex: 1">Where to?</h2>
+
+
+      <md-button>
+         <router-link tag="span" to="/">Go to Home</router-link>
+       </md-button>
+
+       <md-button>
+         <router-link tag="span" to="/venues">Go to Venues</router-link>
+       </md-button>
+
+
+    </md-toolbar>
 
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-}
+  export default {}
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

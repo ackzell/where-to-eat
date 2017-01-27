@@ -6,7 +6,11 @@ import App from './App'
 import VueRouter from 'vue-router'
 import { routes } from './routes'
 
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
+
 Vue.use(VueRouter)
+Vue.use(VueMaterial)
 
 const router = new VueRouter({
   routes
