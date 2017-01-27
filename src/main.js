@@ -3,18 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 
-import VueRouter from 'vue-router'
-import { routes } from './routes'
+import { router } from './config/router.config'
+import './config/vue2-google-maps.config'
+import './config/vue-material.config'
 
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.css'
-
-Vue.use(VueRouter)
-Vue.use(VueMaterial)
-
-const router = new VueRouter({
-  routes
-})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

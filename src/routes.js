@@ -1,5 +1,5 @@
-import HomeComponent from './components/Home'
-import VenuesComponent from './components/Venues'
+import HomeComponent from './routes/home/Home'
+import VenuesComponent from './routes/venues/Venues'
 
 export const routes = [
   {

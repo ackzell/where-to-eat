@@ -1,20 +1,16 @@
 <template>
   <div id="app">
      <md-toolbar class="">
-      <md-button class="md-icon-button">
-        <md-icon>menu</md-icon>
-      </md-button>
 
       <h2 class="md-title" style="flex: 1">Where to?</h2>
 
+      <md-list-item>
+         <router-link to="/">Go to Home</router-link>
+       </md-list-item>
 
-      <md-button>
-         <router-link tag="span" to="/">Go to Home</router-link>
-       </md-button>
-
-       <md-button>
-         <router-link tag="span" to="/venues">Go to Venues</router-link>
-       </md-button>
+       <md-list-item>
+         <router-link to="/venues">Go to Venues</router-link>
+       </md-list-item>
 
 
     </md-toolbar>
@@ -30,4 +26,7 @@
 
 <style>
 
+  li.md-list-item {
+    list-style: none;
+  }
 </style>
