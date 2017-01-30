@@ -1,26 +1,25 @@
 <template>
   <div id="app">
-     <md-toolbar class="">
 
+  <md-whiteframe md-elevation="2" md-tag="md-toolbar">
+    <div class="md-toolbar-container">
       <h2 class="md-title" style="flex: 1">Where to?</h2>
+    </div>
 
-      <md-list-item>
-         <router-link to="/">Home</router-link>
-       </md-list-item>
+    <router-tabs></router-tabs>
+</md-whiteframe>
 
-       <md-list-item>
-         <router-link to="/venues">Venues</router-link>
-       </md-list-item>
-
-
-    </md-toolbar>
-
-    <router-view></router-view>
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
-  export default {}
+  import RouterTabs from './components/RouterTabs'
+  export default {
+    components: {
+      RouterTabs
+    }
+  }
 
 </script>
 
@@ -29,4 +28,9 @@
   li.md-list-item {
     list-style: none;
   }
+
+  .main-tab {
+    height: 30px;
+  }
+
 </style>

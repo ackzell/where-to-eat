@@ -1,25 +1,27 @@
 <template>
   <div>
-    Venues Component
+
+    <md-progress md-indeterminate v-if="loading"></md-progress>
 
     <gmap-map
+    v-if="!loading"
     :center="center"
-    :zoom="15"
+    :zoom="18"
     style="width: 100%; height: 700px"
-  >
-    <gmap-marker
-      v-for="m in markers"
-      :position="m.position"
-      :clickable="true"
-      :draggable="true"
-      @click="center=m.position"
-    ></gmap-marker>
+    >
+      <gmap-marker
+        v-for="m in markers"
+        :position="m.position"
+        :clickable="true"
+        :draggable="true"
+        @click="center=m.position"
+      ></gmap-marker>
 
-    <gmap-info-window
-      :position="center"
-      :content="content"
-    ></gmap-info-window>
-  </gmap-map>
+      <gmap-info-window
+        :position="center"
+        :content="content"
+      ></gmap-info-window>
+    </gmap-map>
 
 
   </div>
@@ -39,11 +41,13 @@
           }
 
           this.center = pos
+          this.loading = false
         })
       }
     },
     data() {
       return {
+        loading: true,
         center: { lat: 0, lng: 0 },
         content: 'Your current Location',
         markers: [{
@@ -57,5 +61,4 @@
 </script>
 
 <style>
-
 </style>
