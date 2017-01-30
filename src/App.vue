@@ -5,11 +5,11 @@
       <h2 class="md-title" style="flex: 1">Where to?</h2>
 
       <md-list-item>
-         <router-link to="/">Go to Home</router-link>
+         <router-link to="/">Home</router-link>
        </md-list-item>
 
        <md-list-item>
-         <router-link to="/venues">Go to Venues</router-link>
+         <router-link to="/venues">Venues</router-link>
        </md-list-item>
 
 
