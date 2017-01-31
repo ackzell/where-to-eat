@@ -7,7 +7,7 @@
     v-if="!loading"
     :center="center"
     :zoom="18"
-    style="width: 100%; height: 700px"
+
     >
       <gmap-marker
         v-for="m in markers"
@@ -20,15 +20,22 @@
       <gmap-info-window
         :position="center"
         :content="content"
+        class="info-w"
       ></gmap-info-window>
     </gmap-map>
 
+    <venue-form></venue-form>
 
   </div>
 </template>
 
 <script>
+  import VenueForm from './VenueForm.vue'
+
   export default {
+    components: {
+      VenueForm
+    },
     beforeCreate() {
 
       if ( navigator.geolocation ) {
@@ -49,7 +56,7 @@
       return {
         loading: true,
         center: { lat: 0, lng: 0 },
-        content: 'Your current Location',
+        content: '<div class="style-me">Your current Location</div>',
         markers: [{
           position: {lat: 10.0, lng: 10.0}
         }, {
@@ -60,5 +67,11 @@
   }
 </script>
 
-<style>
+<style lang="stylus">
+  .vue-map-container
+    width: 100%
+    height: 500px
+
+  .style-me
+    background: red
 </style>
