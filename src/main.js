@@ -5,7 +5,8 @@ import App from './App'
 
 import { router } from './config/router.config'
 import './config/vue2-google-maps.config'
-import './config/vue-material.config'
+// import './config/vue-material.config'
+import './config/vuetify.config'
 
 /* eslint-disable no-new */
 new Vue({

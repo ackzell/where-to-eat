@@ -1,13 +1,12 @@
 <template>
   <div>
 
-    <md-progress md-indeterminate v-if="loading"></md-progress>
+    <v-progress-linear indeterminate height="3" v-if="loading"></v-progress-linear>
 
     <gmap-map
     v-if="!loading"
     :center="center"
     :zoom="18"
-
     >
       <gmap-marker
         v-for="m in markers"
@@ -23,8 +22,6 @@
         class="info-w"
       ></gmap-info-window>
     </gmap-map>
-
-    <venue-form></venue-form>
 
   </div>
 </template>
@@ -56,7 +53,7 @@
       return {
         loading: true,
         center: { lat: 0, lng: 0 },
-        content: '<div class="style-me">Your current Location</div>',
+        content: 'Your current Location',
         markers: [{
           position: {lat: 10.0, lng: 10.0}
         }, {
